@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tumblr Posts</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="tumblr.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.ba-bbq/1.2.1/jquery.ba-bbq.min.js"></script>
+    <script src="TumblrPosts.min.js"></script>
+</head>
+<body>
+    <div id="form">
+        <div id="showform"><a href="#showform">Show input form</a></div>
+        
+        <form id="inputform">
+            <label for="tumblrId" class="main">Tumblr ID:</label>
+            <input id="tumblrId" class="main" name="tumblrId" size="8" value="fer1972">
+            &nbsp;
+            <input id="fetch" class="main" type="submit" value="Fetch!">
+            &nbsp;
+            <a id="toggleadvopts" href="#toggleadvopts">Toggle advanced options</a>
+            
+            <div id="advoptions">
+                <label for="postId">Post ID:</label>
+                <input id="postId" name="postId" size="4">
+                &nbsp;
+                <label for="tagged">Tagged:</label>
+                <input id="tagged" name="tagged" size="4">
+                &nbsp;
+                <label for="start">Start:</label>
+                <input id="start" name="start" value="0" size="2">
+                &nbsp;
+                <label for="num">Posts:</label>
+                <input id="num" name="num" value="10" size="2">
+                <div class="grey">
+                    <label>Type:</label>
+                    <!-- text, quote, photo, link, chat, video, audio -->
+                    <input id="type_all" name="ptype" value="" type="radio" checked="checked"><label for="type_all" class="plain"> All</label>
+                    <input id="type_text" name="ptype" value="text" type="radio"><label for="type_text" class="plain"> Text</label>
+                    <input id="type_photo" name="ptype" value="photo" type="radio"><label for="type_photo" class="plain"> Photo</label>
+                    <input id="type_video" name="ptype" value="video" type="radio"><label for="type_video" class="plain"> Video</label>
+                    <input id="type_audio" name="ptype" value="audio" type="radio"><label for="type_audio" class="plain"> Audio</label>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div id="images"></div>
+    
+    <div id="navigation">
+        <a id="first" href="#first" class="navbutt">&laquo; First</a>
+        <a id="prev" href="#prev" class="navbutt">&lt; Previous page</a>
+        <a id="next" href="#next" class="navbutt">Next page &gt;</a>
+        <a id="last" href="#last" class="navbutt">Last &raquo;</a>
+    </div>
+</body>
+</html>
+

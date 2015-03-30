@@ -1,0 +1,25 @@
+{
+  "name": "tumblrposts",
+  "version": "1.0.0",
+  "description": "A simple responsive Tumblr reader - using the older v1 tumblr api",
+  "author": "Kimmo Hernborg <kimmo.hernborg@gmail.com>",
+  "scripts": {
+    "start": "index.html"
+  },
+  "main": "lib/foo.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KimmoHernborg/tumblrposts-jquery"
+  },
+  "keywords": [
+    "tumblr"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "uglify-js": "2.4.x",
+    "node-sass": "2.0.x"
+  },
+  "preferGlobal": true,
+  "private": true,
+  "license": "MIT"
+}
