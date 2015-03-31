@@ -126,7 +126,7 @@
         var addSource = function ($post, post) {
             $post.append(
                 '<div class="source">Source: <a href="' + post['url-with-slug'] + '" target="_blank">' + post['url-with-slug'] + '</a>' + 
-                (post.hasOwnProperty('photo-link-url') ? ' (<a href="' + post['photo-link-url'] + '">' + post['photo-link-url'] + '</a>)' : '') + 
+                (post.hasOwnProperty('photo-link-url') ? ' Link: <a href="' + post['photo-link-url'] + '" target="_blank">' + post['photo-link-url'] + '</a>' : '') + 
                 '</div>'
             );
         };
