@@ -150,12 +150,11 @@ $(function() {
     //window.tumblrPosts = $('#images').TumblrPosts({tumblrId: 'fer1972'}).data('TumblrPosts');
     
     window.tumblrPosts = $('#images').TumblrPosts().data('TumblrPosts');
-    var hr = function () {
-        var w = $(window).height() * 3 / 4; // Most images are 4/3, fit to screen height
-        $('#imgwidth').text("#images, #form { max-width: " + w + "px !important; }");
-    };
-    hr();
-    $(window).resize(hr);
+    $(window).resize(function () {
+        var w = $(window).height() * 2 / 3; // Most images are 3/2, fit to screen height
+        $('#imgwidth').text("#images,#form {max-width: " + w + "px;}");
+    });
+    $(window).trigger('resize');
     var prevId;
     $('#form').submit(function(e) {
         e.preventDefault();
