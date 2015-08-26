@@ -60,9 +60,15 @@
                     console.log(tumblr.posts[i]);
                 }
             }
+            forceVideoControls();
         };
         var clear = function () {
             $element.empty();
+        };
+        var forceVideoControls = function () {
+            $element.find('video').each(function() {
+                $(this).prop("controls", true);
+            });
         };
         var cleanHTML = function (htmlText) {
             //return $('<span>' + htmlText + '</span>').text();
@@ -75,9 +81,11 @@
             var $post = $('<div class="post"></div>');
             var photos = (post.photos && post.photos.length > 0) ? post.photos : [post];
             var photosHTML = ['<div class="images">'];
+            var imgsrc;
             for (var i in photos) {
-                photosHTML.push('<a class="nolink hoverZoomLink" href="' + photos[i]['photo-url-1280'] + '" target="_blank">',
-                '<img src="' + photos[i]['photo-url-1280'] + '">',
+                imgsrc = photos[i]['photo-url-500'].match(/\.gif$/ig) ? photos[i]['photo-url-500'] : photos[i]['photo-url-1280'];
+                photosHTML.push('<a class="nolink hoverZoomLink" href="' + imgsrc + '" target="_blank">',
+                '<img src="' + imgsrc + '">',
                 '</a>');
             }
             photosHTML.push('</div>');
