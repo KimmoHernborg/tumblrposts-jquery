@@ -6,7 +6,7 @@
   "scripts": {
     "start": "index.html"
   },
-  "main": "lib/foo.js",
+  "main": "TumblrPosts.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/KimmoHernborg/tumblrposts-jquery"
@@ -16,8 +16,8 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "uglify-js": "2.4.x",
-    "node-sass": "2.0.x"
+    "uglify-js": "2.8.x",
+    "node-sass": "latest"
   },
   "preferGlobal": true,
   "private": true,
